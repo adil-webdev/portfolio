@@ -66,25 +66,25 @@
 					<ul class='menu-items' >
 						
 						<li>
-							<a href='#' class='section-toggle' data-section='intro' >
+							<a href='#' class='section-toggle' data-section='intro' onclick="closeNavbar()">
 								Home
 							</a>
 						</li>
 						
 						<li>
-							<a href='#about' class='section-toggle' data-section='about' >
+							<a href='#about' class='section-toggle' data-section='about' onclick="closeNavbar()">
 								About
 							</a>
 						</li>
 						
 						<li>
-							<a href='#resume' class='section-toggle' data-section='resume' >
+							<a href='#resume' class='section-toggle' data-section='resume' onclick="closeNavbar()">
 								Resume
 							</a>
 						</li>
 						
 						<li>
-							<a href='#portfolio' class='section-toggle' data-section='portfolio' >
+							<a href='#portfolio' class='section-toggle' data-section='portfolio' onclick="closeNavbar()">
 								Portfolio
 							</a>
 						</li>
@@ -1238,6 +1238,11 @@
 		<script src='js/jquery.magnific-popup.min.js' ></script>
 		<script src='js/validator.min.js' ></script>
 		<script src='js/script.js' ></script>
+		<script>
+			 function closeNavbar() {
+		      document.getElementById('inner').style.display = 'none';
+    		}
+		</script>
 		
 	</body>
 </html>
