@@ -174,6 +174,26 @@ $(function(){
 			});
 		}
 	});
+
+		// Get the content element
+		var content = $('#content');
+	
+		// Listen for the scroll event
+		$(window).scroll(function() {
+			// Get the current scroll position
+			var scrollPosition = $(window).scrollTop();
+	
+			// Set a threshold value (adjust as needed)
+			var threshold = 200;
+	
+			// Toggle visibility based on scroll position
+			if (scrollPosition > threshold) {
+				content.css('visibility', 'hidden');
+			} else {
+				content.css('visibility', 'visible');
+			}
+		});
+	
 	
 	
 	
