@@ -29,8 +29,8 @@
 		$recipient = "haza.adil.on@gmail.com";
 		
 		$mailheader = "From: $email \r\n";
-		
-		if( mail($recipient, $name, $formcontent, $mailheader) == false ){
+		$mailSuccess = mail($recipient, $name, $formcontent, $mailheader); 
+		if($mailSuccess){
 			$data['error'] = 'Sorry, an error occured!';
 		}else{
 			$data['error'] = false;
