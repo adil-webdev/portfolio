@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 	
 	/*
 		The Send Mail php Script for Contact Form
@@ -22,11 +22,14 @@
 	// 	$data['error'] = 'The message field is required!';
 	// }else{
 		
-	// 	$formcontent="From: $name\nSubject: $subject\nEmail: $email\nMessage: $message";
+		
+	
+	// }
+	// $formcontent="From: $name\nSubject: $subject\nEmail: $email\nMessage: $message";
 		
 		
 	// 	//Place your Email Here
-	// 	$recipient = "haza.adil.on@gmail.com";
+	// 	$recipient = "ch.haris.frq@gmail.com";
 		
 	// 	$mailheader = "From: $email \r\n";
 	// 	$mailSuccess = mail($recipient, $name, $formcontent, $mailheader); 
@@ -36,8 +39,6 @@
 	// 		$data['error'] = false;
 	// 	}
 	
-	// }
-	
 	// echo json_encode($data);
 	
-?>
+?> -->
