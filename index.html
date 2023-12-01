@@ -1169,7 +1169,8 @@
 
 								<div class='contact-form'>
 
-									<form id='contact-form' data-toggle='validator' method='post' action="https://formspree.io/f/xeqbbpea">
+									<form id='contact-form' data-toggle='validator' method='post'
+										action="https://formspree.io/f/xeqbbpea">
 
 										<div id='contact-form-result'>
 											<p id="my-form-status"></p>
@@ -1189,7 +1190,6 @@
 
 											<div class='col-md-6'>
 												<div class='form-group'>
-
 													<input type='email' class='form-control' placeholder='Email'
 														name='email' required>
 													<div class='help-block with-errors'></div>
@@ -1318,11 +1318,13 @@
 			}).then(response => {
 				if (response.ok) {
 					status.innerHTML = "Thanks for your submission!";
+					status.className = 'alert alert-success';
 					form.reset()
 				} else {
 					response.json().then(data => {
 						if (Object.hasOwn(data, 'errors')) {
 							status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+							$(status).addClass("alert alert-danger");
 						} else {
 							status.innerHTML = "Oops! There was a problem submitting your form"
 						}
@@ -1333,6 +1335,28 @@
 			});
 		}
 		form.addEventListener("submit", handleSubmit);
+		let menu = $('.menu');
+		let menuBtn = $('.menu-btn');
+
+		$(menuBtn).click(function () {
+			if ($('.menu:hover , .menu-btn:hover + .menu')) {
+				$('.menu:hover , .menu-btn:hover + .menu').css('width', '300px');
+				console.log('menu btn clicked');
+			}
+		});
+		$('.menu-items li').click(function () {
+			$('.menu:hover , .menu-btn:hover + .menu').css('width', '0px');
+			// console.log('menu items li');
+		});
+		$(menuBtn).mouseenter(function () {
+			$('.menu:hover , .menu-btn:hover + .menu').css('width', '300px');
+			console.log('menu hoverd');
+		})
+		$('.menu, .inner').mouseleave(function () {
+			$('.menu').css('width', '0px');
+			console.log('mouse leaved');
+		});
+
 	</script>
 
 </body>
