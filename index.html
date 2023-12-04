@@ -8,7 +8,7 @@
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
 
-	<title>Modern & Minimal Resume / CV & vCard Template</title>
+	<title>Adil Farooq</title>
 
 
 	<!--=====================================================
@@ -1347,11 +1347,14 @@
 			}
 		});
 		$('.section').click(function (e) { 
-			console.log('section clicked');
 			$('.menu').css('width', '0px');							
 		});
 		$('.menu-items li').click(function () {
 			$('.menu:hover , .menu-btn:hover + .menu').css('width', '0px');
+			$('.section').delay(2000).queue(function (next){
+				$(this).scrollTop(0);
+				next();
+			})
 			// console.log('menu items li');
 		});
 		$(menuBtn).mouseenter(function () {
@@ -1361,10 +1364,6 @@
 		$('.menu, .inner').mouseleave(function () {
 			$('.menu').css('width', '0px');
 			// console.log('mouse leaved');
-		});
-		$(document).scroll(function (e) {
-			e.preventDefault; 
-			console.log("scrolling");
 		});
 
 	</script>
