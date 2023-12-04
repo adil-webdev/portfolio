@@ -1339,10 +1339,16 @@
 		let menuBtn = $('.menu-btn');
 
 		$(menuBtn).click(function () {
-			if ($('.menu:hover , .menu-btn:hover + .menu')) {
+			if ($('.menu:hover , .menu-btn:hover + .menu').css('width') == '0px' ) {
 				$('.menu:hover , .menu-btn:hover + .menu').css('width', '300px');
 				// console.log('menu btn clicked');
+			}else {
+				$('.menu:hover , .menu-btn:hover + .menu').css('width', '0px');				
 			}
+		});
+		$('.section').click(function (e) { 
+			console.log('section clicked');
+			$('.menu').css('width', '0px');							
 		});
 		$('.menu-items li').click(function () {
 			$('.menu:hover , .menu-btn:hover + .menu').css('width', '0px');
@@ -1355,6 +1361,10 @@
 		$('.menu, .inner').mouseleave(function () {
 			$('.menu').css('width', '0px');
 			// console.log('mouse leaved');
+		});
+		$(document).scroll(function (e) {
+			e.preventDefault; 
+			console.log("scrolling");
 		});
 
 	</script>
